@@ -3,7 +3,6 @@ import {Lesson} from '../shared/model/lesson';
 import {Observable, BehaviorSubject} from 'rxjs';
 
 class DataStore {
-  // private lessons: Lesson[] = [];
   private lessonsListSubject = new BehaviorSubject([]);
   public lessonsList$: Observable<Lesson[]> = this.lessonsListSubject.asObservable();
 
